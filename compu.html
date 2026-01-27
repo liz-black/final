@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Curso de Computación</title>
+<link rel="stylesheet" href="css/compu.css">
+</head>
+
+<body>
+
+<nav>
+  <a href="index.html">💻 Curso de Computación</a>
+</nav>
+
+<div class="container">
+<h1>Portafolio Educativo Interactivo</h1>
+<p>Área de Computación</p>
+
+<div>
+  <button class="session-btn" data-s="s1">Clase 1</button>
+  <button class="session-btn" data-s="s2">Clase 2</button>
+  <button class="session-btn" data-s="s3">Clase 3</button>
+  <button class="session-btn" data-s="s4">Clase 4</button>
+  <button class="btn-danger session-btn" data-s="final">Evaluación Final</button>
+</div>
+
+<!-- ===== CLASE 1 ===== -->
+<div id="s1" class="session">
+<h3>Clase 1: ¿Para qué sirven las computadoras?</h3>
+
+<div class="video-box">
+  <video controls>
+    <source src="assets/img/5.mp4" type="video/mp4">
+  </video>
+</div>
+
+<div class="resources">
+  <div class="resource-card">
+    <h4>📄 Ficha</h4>
+    <a href="assets/fichas/computadoras.pdf" target="_blank">Abrir</a>
+  </div>
+
+  <div class="resource-card">
+    <h4>📊 PPT</h4>
+    <a href="assets/ppt/computadoras.pdf" target="_blank">Abrir</a>
+  </div>
+</div>
+
+<div id="quiz1"></div>
+<button onclick="revisarClase('quiz1','r1')">Revisar</button>
+<p id="r1" class="resultado"></p>
+</div>
+
+
+<!-- ===== CLASE 2 ===== -->
+<div id="s2" class="session">
+<h3>Clase 2: Partes de la computadora</h3>
+
+<div class="video-box">
+  <video controls>
+    <source src="assets/img/6.mp4" type="video/mp4">
+  </video>
+</div>
+
+<div class="resources">
+  <div class="resource-card">
+    <h4>📄 Ficha</h4>
+    <a href="assets/fichas/partes.pdf" target="_blank">Abrir</a>
+  </div>
+
+  <div class="resource-card">
+    <h4>📊 PPT</h4>
+    <a href="assets/ppt/partes.pdf" target="_blank">Abrir</a>
+  </div>
+</div>
+
+<div id="quiz2"></div>
+<button onclick="revisarClase('quiz2','r2')">Revisar</button>
+<p id="r2" class="resultado"></p>
+</div>
+
+
+<!-- ===== CLASE 3 ===== -->
+<div id="s3" class="session">
+<h3>Clase 3: Encender la computadora y Paint</h3>
+
+<div class="video-box">
+  <video controls>
+    <source src="assets/img/7.mp4" type="video/mp4">
+  </video>
+</div>
+
+<div class="resources">
+  <div class="resource-card">
+    <h4>📄 Ficha</h4>
+    <a href="assets/fichas/encender.pdf" target="_blank">Abrir</a>
+  </div>
+
+  <div class="resource-card">
+    <h4>📊 PPT</h4>
+    <a href="assets/ppt/encender.pdf" target="_blank">Abrir</a>
+  </div>
+</div>
+
+<div id="quiz3"></div>
+<button onclick="revisarClase('quiz3','r3')">Revisar</button>
+<p id="r3" class="resultado"></p>
+</div>
+
+
+<!-- ===== CLASE 4 ===== -->
+<div id="s4" class="session">
+<h3>Clase 4: Herramientas de Paint</h3>
+
+<div class="video-box">
+  <video controls src="assets/img/8.mp4"></video>
+</div>
+
+<div class="resources">
+  <div class="resource-card">
+    <h4>📄 Ficha</h4>
+    <a href="assets/fichas/paint.pdf" target="_blank">Abrir</a>
+  </div>
+
+  <div class="resource-card">
+    <h4>📊 PPT</h4>
+    <a href="assets/ppt/paint.pdf" target="_blank">Abrir</a>
+  </div>
+</div>
+
+<div id="quiz4"></div>
+<button onclick="revisarClase('quiz4','r4')">Revisar</button>
+<p id="r4" class="resultado"></p>
+</div>
+
+<!-- ===== EVALUACIÓN FINAL ===== -->
+<div id="final" class="session">
+<h3>Evaluación Final</h3>
+<div id="finalQuiz"></div>
+<button class="btn-danger" onclick="calcularFinal()">Calcular Nota</button>
+<button onclick="descargarEvaluacion()">Descargar Evaluación</button>
+<p id="notaFinal" class="resultado"></p>
+</div>
+
+</div>
+
+<!-- jsPDF -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<!-- JS DEL CURSO -->
+<script src="js/compu.js"></script>
+
+</body>
+</html>
