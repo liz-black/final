@@ -109,3 +109,45 @@ video{
   font-weight:bold;
   font-size:18px;
 }
+
+
+
+@media (min-width: 769px){
+  .curso-card{
+    flex-direction:row;
+  }
+
+  .curso-card button{
+    width:auto;
+  }
+}
+
+@media (max-width: 768px){
+  .curso-card{
+    flex-wrap:wrap;
+  }
+
+  .curso-card button{
+    width:45%;
+  }
+}
+
+@media (max-width: 480px){
+  .curso-card{
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .curso-card button{
+    width:100%;
+    max-width:260px;
+  }
+
+  nav a{
+    font-size:18px;
+  }
+
+  h1{
+    font-size:1.8rem;
+  }
+}
