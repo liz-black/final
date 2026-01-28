@@ -1,10 +1,18 @@
-body{
+/* ===== RESET ===== */
+*{
   margin:0;
+  padding:0;
+  box-sizing:border-box;
   font-family: Arial, sans-serif;
+}
+
+/* ===== BODY ===== */
+body{
   background:#0a1f44;
   color:#f1f5f9;
 }
 
+/* ===== NAV ===== */
 nav{
   position:fixed;
   top:0;
@@ -21,6 +29,7 @@ nav a{
   font-weight:bold;
 }
 
+/* ===== CONTENEDOR ===== */
 .container{
   max-width:1000px;
   margin:auto;
@@ -28,9 +37,9 @@ nav a{
   text-align:center;
 }
 
+/* ===== BOTONES ===== */
 button{
   padding:10px 16px;
-  margin:5px;
   border-radius:8px;
   border:2px solid #60a5fa;
   background:transparent;
@@ -46,12 +55,23 @@ button:hover{
 .btn-danger{
   background:#dc2626;
   border:none;
+  color:white;
 }
 
+/* ===== CONTENEDOR DE CLASES ===== */
+.curso-card{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  margin:25px 0;
+}
+
+/* ===== SESIONES ===== */
 .session{
   display:none;
 }
 
+/* ===== VIDEO ===== */
 .video-box{
   max-width:800px;
   margin:20px auto;
@@ -62,6 +82,7 @@ video{
   border-radius:10px;
 }
 
+/* ===== RECURSOS ===== */
 .resources{
   display:flex;
   justify-content:center;
@@ -88,6 +109,7 @@ video{
   border-radius:6px;
 }
 
+/* ===== QUIZ ===== */
 .quiz{
   background:#f1f3f5;
   color:#222;
@@ -101,4 +123,44 @@ video{
 .resultado{
   font-weight:bold;
   font-size:18px;
+}
+
+@media (min-width: 769px){
+  .curso-card{
+    flex-direction:row;
+  }
+
+  .curso-card button{
+    width:auto;
+  }
+}
+
+@media (max-width: 768px){
+  .curso-card{
+    flex-wrap:wrap;
+  }
+
+  .curso-card button{
+    width:45%;
+  }
+}
+
+@media (max-width: 480px){
+  .curso-card{
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .curso-card button{
+    width:100%;
+    max-width:260px;
+  }
+
+  nav a{
+    font-size:18px;
+  }
+
+  h1{
+    font-size:1.8rem;
+  }
 }
